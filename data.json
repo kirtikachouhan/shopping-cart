@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "iPhone6s",
+        "brand": "APPLE",
+        "ram": "64",
+        "screen": "5",
+        "price": 40000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 2,
+        "name": "iPhone5s",
+        "brand": "APPLE",
+        "ram": "64",
+        "screen": "4",
+        "price": 44000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 3,
+        "name": "iPhone4s",
+        "brand": "APPLE",
+        "ram": "32",
+        "screen": "4",
+        "price": 54000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 4,
+        "name": "iPhone7s",
+        "brand": "APPLE",
+        "ram": "128",
+        "screen": "5",
+        "price": 64000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 5,
+        "name": "iPhone8s",
+        "brand": "APPLE",
+        "ram": "64",
+        "screen": "4",
+        "price": 74000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 6,
+        "name": "iPhoneX",
+        "brand": "APPLE",
+        "ram": "128",
+        "screen": "6",
+        "price": 84000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 7,
+        "name": "J1",
+        "brand": "SAMSUNG",
+        "ram": "64",
+        "screen": "5",
+        "price": 14000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 8,
+        "name": "J2",
+        "brand": "SAMSUNG",
+        "ram": "128",
+        "screen": "5",
+        "price": 24000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 9,
+        "name": "J3",
+        "brand": "SAMSUNG",
+        "ram": "32",
+        "screen": "6",
+        "price": 34000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 10,
+        "name": "J4",
+        "brand": "SAMSUNG",
+        "ram": "128",
+        "screen": "6",
+        "price": 45000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 11,
+        "name": "J5",
+        "brand": "SAMSUNG",
+        "ram": "256",
+        "screen": "7",
+        "price": 42000,
+        "add": false,
+        "quantity": 0
+    },
+    {
+        "id": 12,
+        "name": "J6",
+        "brand": "SAMSUNG",
+        "ram": "256",
+        "screen": "7",
+        "price": 52000,
+        "add": false,
+        "quantity": 0
+    }
+]

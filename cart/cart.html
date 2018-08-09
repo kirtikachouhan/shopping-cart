@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 header">
+            <div class="col-md-8">
+                <h3 class="text-name">Cart Items</h3>
+            </div>
+            <div class="col-md-4 text-box">
+                <button type="button" ng-click="navigate()" class="btn btn-primary float-right">{{shop}}</button>
+            </div>
+        </div>
+        <div class="col-md-12" ng-if="!message">
+            <div class="row section" ng-show="(data.data | filter:{add:true}).length">
+                <div class="col-md-4 title-head header">NAME</div>
+                <div class="col-md-4 title-head header"> QUANTITY</div>
+                <div class="col-md-4 title-head header"> PRICE</div>
+            </div>
+            <div class="row section" ng-repeat="each in data.data | filter:{add:true}">
+                <div class="col-md-4">{{each.name}}</div>
+                <div class="col-md-4">
+                    <select ng-model="each.quantity" ng-options="n for n in [] | range:0:5" ng-change="priceCal()"></select>
+                </div>
+                <div class="col-md-4">{{each.price*each.quantity}}
+                    <button class="btn btn-warning float-right" ng-click="removeItem(each.id)">Remove</button>
+                </div>
+            </div>
+            <div class="row section title-head footer" ng-show="(data.data | filter:{add:true}).length">
+                <div class="col-md-6">Total: {{data.price}}</div>
+                <div class="col-md-6">
+                    <button ng-disabled="!data.price" class="btn btn-success float-right" ng-click="buyProduct()">BUY</button>
+                </div>
+            </div>
+            <div class="row section" ng-show="!(data.data | filter:{add:true}).length">
+                No Items Added To Cart. Please Shop First.
+            </div>
+        </div>
+        <div class="col-md-12" ng-if="message">
+            <h1>{{message}}</h1>
+        </div>
+    </div>
+</div>

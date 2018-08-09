@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 header">
+            <div class="col-md-4">
+                <h3 class="float-right">Search Items</h3>
+            </div>
+            <div class="col-md-4 text-box">
+                <input type="text" ng-model="selected" uib-typeahead="eachdata.name for eachdata in allData | filter:$viewValue | limitTo:8"
+                    class="form-control">
+            </div>
+            <div class="col-md-4 text-box">
+                <button type="button" ng-click="navigate()" class="btn btn-primary float-right">Cart</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <div class="title-head col-sm-8">Filters</div>
+                <div class="col-sm-12">
+                    <div class="title-head header">BRAND</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.brand' ng-true-value="'SAMSUNG'" ng-false-value="''"> SAMSUNG</div> {{brand[0]}}
+                    <div>
+                        <input type="checkbox" ng-model='search.brand' ng-true-value="'APPLE'" ng-false-value="''"> APPLE</div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="title-head header">RAM</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.ram' ng-true-value="'32'" ng-false-value="''"> 32 GB</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.ram' ng-true-value="'64'" ng-false-value="''"> 64 GB</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.ram' ng-true-value="'128'" ng-false-value="''"> 128 GB</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.ram' ng-true-value="'256'" ng-false-value="''"> 256 GB</div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="title-head header">SCREEN SIZE</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.screen' ng-true-value="'4'" ng-false-value="''"> 4 INCH</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.screen' ng-true-value="'5'" ng-false-value="''"> 5 INCH</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.screen' ng-true-value="'6'" ng-false-value="''"> 6 INCH</div>
+                    <div>
+                        <input type="checkbox" ng-model='search.screen' ng-true-value="'7'" ng-false-value="''"> 7 INCH</div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="title-head">Results</div>
+                <div ng-repeat="eachdata in allData | filter:selected | filter:search | limitTo:itemsPerPage:((currentPage-1)*itemsPerPage)">
+                    <div class="box-border col-sm-3 margin-all">
+                        <img src="phone.jpeg" class="img-size">
+                        <div class="text-name">{{eachdata.name}}</div>
+                        <div class="margin-top">PRICE:{{eachdata.price}}
+                            <span class="float-right">
+                                <button type="button" class="btn btn-warning" ng-disabled="eachdata.add" ng-click="addClick(eachdata.id)">ADD</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="(allData|filter:selected | filter:search).length==0">No Data Found</div>
+            </div>
+            <div class="float-right" ng-hide="!(allData|filter:selected | filter:search).length">
+                <ul uib-pagination total-items="(allData|filter:selected | filter:search).length" ng-model="currentPage" ng-change="pageChanged()"></ul>
+            </div>
+
+        </div>
+    </div>
+</div>
